@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4FDBFE1-7578-495F-843F-428E43F87FC0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RemoteAccessUI_Client</RootNamespace>
+    <AssemblyName>RemoteAccessUI_Client</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RAT.Communicate">
+      <HintPath>..\libs\RAT.Communicate.dll</HintPath>
+    </Reference>
+    <Reference Include="RAT.Core">
+      <HintPath>..\libs\RAT.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="RAT.Respone">
+      <HintPath>..\libs\RAT.Respone.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DialogBox\ChatBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBox\ChatBoxForm.Designer.cs">
+      <DependentUpon>ChatBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBox\InputBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBox\InputBoxForm.Designer.cs">
+      <DependentUpon>InputBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBox\PropertiesBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBox\PropertiesBoxForm.Designer.cs">
+      <DependentUpon>PropertiesBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBox\TransferProgressBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBox\TransferProgressBoxForm.Designer.cs">
+      <DependentUpon>TransferProgressBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="exploreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="exploreForm.Designer.cs">
+      <DependentUpon>exploreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileDownloadManagement.cs" />
+    <Compile Include="FileTransferManagement.cs" />
+    <Compile Include="FileManagement.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListViewEx.Designer.cs">
+      <DependentUpon>ListViewEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalServerStorageManagement.cs" />
+    <Compile Include="MyGlobal.cs" />
+    <Compile Include="NetworkServer.cs" />
+    <Compile Include="ProgEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgEx.Designer.cs">
+      <DependentUpon>ProgEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressBarEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressBarEx.Designer.cs">
+      <DependentUpon>ProgressBarEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DialogBox\ChatBoxForm.resx">
+      <DependentUpon>ChatBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBox\InputBoxForm.resx">
+      <DependentUpon>InputBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBox\PropertiesBoxForm.resx">
+      <DependentUpon>PropertiesBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBox\TransferProgressBoxForm.resx">
+      <DependentUpon>TransferProgressBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exploreForm.resx">
+      <DependentUpon>exploreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgEx.resx">
+      <DependentUpon>ProgEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\03_left-24.png" />
+    <None Include="Assets\Plus-icon.png" />
+    <None Include="Assets\Plus-icon %281%29.png" />
+    <None Include="Assets\free-31-64.png" />
+    <None Include="Assets\free-31-64 - Copy.png" />
+    <None Include="Assets\free-31-48.png" />
+    <None Include="Assets\024_refresh_update_sign_arrow-48.png" />
+    <None Include="Assets\refresh-48.png" />
+    <Content Include="Icon1.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
